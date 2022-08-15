@@ -1,6 +1,7 @@
 .header {
   position: relative;
   width: 100%;
+  z-index: 99;
 }
 .headerContainer {
   padding: 20px 40px;
@@ -30,9 +31,34 @@
   }
 }
 
+.navMenuOpen {
+  @media screen and (min-width: 960px) {
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (max-width: 961px) {
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 85vh;
+    // background-color: #fff;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+}
+
 .navBar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .navBarList {
   @media screen and (max-width: 960px) {
@@ -49,6 +75,10 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 1.12;
+  @media screen and (max-width: 960px) {
+    margin-bottom: 40px;
+    text-align: center;
+  }
 }
 .navBarListItem + .navBarListItem {
   @media screen and (min-width: 960px) {
@@ -64,21 +94,18 @@
   margin-left: auto;
   padding: 0;
   border: none;
+  width: 50px;
+  height: 50px;
   background-color: transparent;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  //   &:hover,
-  //   &:focus {
-  //     color: var(--accent-color);
-  //     fill: var(--accent-color);
-  //   }
-  //   & .icon-cross {
-  //     display: none;
-  //   }
-  //   &.is-open .icon-cross {
-  //     display: block;
-  //   }
-  //   &.is-open .icon-menu {
-  //     display: none;
-  //   }
+  // &:hover,
+  // &:focus {
+  //   color: #063de4;
+  //   fill: #314172;
+  // }
+
+  & .iconMenu {
+    fill: #314172;
+  }
 }

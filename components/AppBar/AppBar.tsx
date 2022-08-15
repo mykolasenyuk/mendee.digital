@@ -1,10 +1,11 @@
+import { useState } from 'react'
 import s from './AppBar.module.scss'
-// import sprite from '../../images/icons/sprite.svg'
-import Image from 'next/image'
-// import Logo from '../../public/vercel.svg'
-import Logo from '../../images/icons/Logo'
 
 export default function AppBar() {
+  const [isActive, setActive] = useState(false)
+  const toggleClass = () => {
+    setActive(!isActive)
+  }
   return (
     <header className={s.header}>
       <div className={s.headerContainer}>
@@ -14,10 +15,22 @@ export default function AppBar() {
               <use href={'/sprite.svg#icon-logoName'} />
             </svg>
           </div>
-          <button className={s.menuBtn}>menu</button>
-          <div className={s.navMenu}>
+
+          <button className={s.menuBtn} onClick={toggleClass}>
+            <svg width="48px" height="48px">
+              {isActive ? (
+                <use className={s.iconMenu} href={'/sprite.svg#icon-close'} />
+              ) : (
+                <use className={s.iconMenu} href={'/sprite.svg#icon-menu'} />
+              )}
+            </svg>
+          </button>
+
+          <div className={isActive ? s.navMenuOpen : s.navMenu}>
             <ul className={s.navBarList}>
-              <li className={s.navBarListItem}>SERVICES</li>
+              <li className={s.navBarListItem}>
+                <a>SERVICES</a>
+              </li>
               <li className={s.navBarListItem}>ABOUT US</li>
               <li className={s.navBarListItem}>CONTACT</li>
             </ul>

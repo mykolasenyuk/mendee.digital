@@ -3,10 +3,11 @@ import Background from '../components/Background/Background'
 import Container from '../components/Container/Container'
 
 const Home = () => (
-  <Container>
-    <AppBar />
-    <Background />
-  </Container>
+  <>
+    <Background>
+      <AppBar />
+    </Background>
+  </>
 )
 
 export default Home
