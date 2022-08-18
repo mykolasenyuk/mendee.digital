@@ -2,8 +2,9 @@
   z-index: 1;
   //   background: #4e54c8;
   //   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-  //   width: 100%;
-  //   height: 100vh;
+  // width: 100%;
+  // height: 100%;
+  // background-color: #f6e9df;
 }
 
 .circles {
@@ -13,8 +14,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
+  // background-color: #f6e9df;
 }
 
 .circles li {
@@ -25,7 +27,8 @@
   height: 20px;
   background: rgba(255, 168, 55, 1);
   animation: animate 25s linear infinite;
-  bottom: -550px;
+  bottom: -350px;
+
   border-radius: 100%;
 }
 
@@ -37,7 +40,7 @@
   background: rgba(255, 168, 55, 1);
 }
 .circles li:nth-child(2) {
-  left: 10%;
+  left: 3%;
   width: 332px;
   height: 332px;
   animation-delay: 2s;
@@ -66,7 +69,8 @@
   left: 65%;
   width: 50px;
   height: 50px;
-  animation-delay: 0s;
+  animation-delay: 1s;
+  animation-duration: 13s;
   background: rgba(255, 255, 255, 1);
 }
 
@@ -74,16 +78,26 @@
   left: 75%;
   width: 110px;
   height: 110px;
-  animation-delay: 3s;
+  animation-delay: 2s;
+  animation-duration: 11s;
   background: rgba(255, 255, 255, 1);
 }
 
 .circles li:nth-child(7) {
   left: 35%;
-  width: 418px;
-  height: 418px;
+  width: 400px;
+  height: 400px;
   animation-delay: 7s;
-  background: rgba(255, 168, 55, 0.833);
+  // background: linear-gradient(
+  //   -115deg,
+  //   rgba(49, 65, 114, 1),
+  //   rgba(255, 168, 55, 1),
+  //   rgba(255, 255, 255, 1)
+  // );
+  background: linear-gradient(289deg, #314172, #ffa737, #fbfafa);
+  // background-size: 600% 600%;
+
+  // animation: AnimationName 42s ease infinite;
 }
 
 .circles li:nth-child(8) {
@@ -109,6 +123,21 @@
   animation-delay: 0s;
   animation-duration: 11s;
 }
+.circles li:nth-child(11) {
+  left: 15%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 3s;
+  animation-duration: 17s;
+}
+.circles li:nth-child(12) {
+  left: 54%;
+  width: 46px;
+  height: 46px;
+  animation-delay: 1s;
+  animation-duration: 14s;
+  background: rgba(49, 65, 114, 1);
+}
 
 @keyframes animate {
   0% {
@@ -119,7 +148,19 @@
 
   100% {
     transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
+    opacity: 0.1;
     border-radius: 100%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

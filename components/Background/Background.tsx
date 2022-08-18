@@ -19,6 +19,8 @@ export default function Background({ children }: LayoutProps) {
           <li></li>
           <li></li>
           <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </div>
       <div className={s.container}>{children}</div>

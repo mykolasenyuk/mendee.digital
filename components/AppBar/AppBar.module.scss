@@ -5,6 +5,18 @@
 }
 .headerContainer {
   padding: 20px 40px;
+  @media screen and (max-width: 960px) {
+    padding: 10px 20px;
+  }
+}
+
+.headerLogo {
+  @media screen and (max-width: 960px) {
+    width: 200px;
+    height: 30px;
+  }
+  width: 285px;
+  height: 48px;
 }
 .navMenu {
   @media screen and (min-width: 960px) {
