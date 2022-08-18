@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { Dispatch, FC, SetStateAction, useState } from 'react'
 import s from './AppBar.module.scss'
 
-export default function AppBar() {
-  const [isActive, setActive] = useState(false)
+interface Props {
+  isActive: boolean
+  setActive: Dispatch<SetStateAction<boolean>>
+}
+
+const AppBar: FC<Props> = ({ isActive, setActive }) => {
   const toggleClass = () => {
     setActive(!isActive)
   }
@@ -10,8 +14,8 @@ export default function AppBar() {
     <header className={s.header}>
       <div className={s.headerContainer}>
         <nav className={s.navBar}>
-          <div className={s.headerLogo}>
-            <svg width="285px" height="48px">
+          <div>
+            <svg className={s.headerLogo}>
               <use href={'/sprite.svg#icon-logoName'} />
             </svg>
           </div>
@@ -40,3 +44,5 @@ export default function AppBar() {
     </header>
   )
 }
+
+export default AppBar
