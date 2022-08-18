@@ -3,9 +3,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Arimo', sans-serif;
-  background-color: #f6e9df;
-  height: 100vh;
-  overflow-y: hidden;
+  /* background-color: #f6e9df; */
+  background-color: #1e1e1e;
+  /* height: 100vh;
+  overflow-y: hidden; */
 }
 
 a {
