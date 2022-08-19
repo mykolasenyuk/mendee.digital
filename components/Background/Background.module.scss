@@ -1,9 +1,19 @@
 .area {
   z-index: 1;
-  //   background: #4e54c8;
-  //   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-  // width: 100%;
-  // height: 100%;
+  // background: #4e54c8;
+  // background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  // width: 100vh;
+  // height: 100vh;
+}
+.btn {
+  position: absolute;
+  z-index: 55;
+  top: 62%;
+}
+.btn1 {
+  position: absolute;
+  z-index: 55;
+  top: 72%;
 }
 
 .circles {
@@ -16,7 +26,20 @@
   height: 100vh;
   overflow: hidden;
   background-color: #f6e9df;
+  transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+// .circlesOpen {
+//   margin: 0;
+//   z-index: 1;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 50%;
+//   height: 100vh;
+//   overflow: hidden;
+//   background-color: #f6e9df;
+//   transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
 
 .circles li {
   position: absolute;
@@ -162,4 +185,268 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+///=======Dark=====///
+
+.circlesDark {
+  margin: 0;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #232323;
+  transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circlesDark li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+  animation: animate 25s linear infinite;
+  bottom: -350px;
+
+  border-radius: 100%;
+}
+
+.circlesDark li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+.circlesDark li:nth-child(2) {
+  left: 3%;
+  width: 332px;
+  height: 332px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+
+.circlesDark li:nth-child(3) {
+  left: 70%;
+  width: 86px;
+  height: 86px;
+  animation-delay: 4s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+
+.circlesDark li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+
+.circlesDark li:nth-child(5) {
+  left: 65%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 1s;
+  animation-duration: 13s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+
+.circlesDark li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 2s;
+  animation-duration: 11s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+
+.circlesDark li:nth-child(7) {
+  left: 35%;
+  width: 400px;
+  height: 400px;
+  animation-delay: 7s;
+
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+
+.circlesDark li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+
+.circlesDark li:nth-child(9) {
+  left: 20%;
+  width: 35px;
+  height: 35px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+
+.circlesDark li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+.circlesDark li:nth-child(11) {
+  left: 15%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 3s;
+  animation-duration: 17s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+.circlesDark li:nth-child(12) {
+  left: 54%;
+  width: 46px;
+  height: 46px;
+  animation-delay: 1s;
+  animation-duration: 14s;
+  background: linear-gradient(180deg, #232323 0%, #31302f 100%);
+}
+
+////=====LIGHT THEME=====////
+
+.circlesLight {
+  margin: 0;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f6e9df;
+  transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circlesLight li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+  animation: animate 25s linear infinite;
+  bottom: -350px;
+
+  border-radius: 100%;
+}
+
+.circlesLight li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+.circlesLight li:nth-child(2) {
+  left: 3%;
+  width: 332px;
+  height: 332px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+
+.circlesLight li:nth-child(3) {
+  left: 70%;
+  width: 86px;
+  height: 86px;
+  animation-delay: 4s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+
+.circlesLight li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+
+.circlesLight li:nth-child(5) {
+  left: 65%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 1s;
+  animation-duration: 13s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+
+.circlesLight li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 2s;
+  animation-duration: 11s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+
+.circlesLight li:nth-child(7) {
+  left: 35%;
+  width: 400px;
+  height: 400px;
+  animation-delay: 7s;
+
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+
+.circlesLight li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+
+.circlesLight li:nth-child(9) {
+  left: 20%;
+  width: 35px;
+  height: 35px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+
+.circlesLight li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+.circlesLight li:nth-child(11) {
+  left: 15%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 3s;
+  animation-duration: 17s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
+}
+.circlesLight li:nth-child(12) {
+  left: 54%;
+  width: 46px;
+  height: 46px;
+  animation-delay: 1s;
+  animation-duration: 14s;
+  background: linear-gradient(180deg, #f6e9df 0%, #fef5eb 100%);
 }
