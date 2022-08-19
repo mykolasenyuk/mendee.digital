@@ -2,6 +2,8 @@ import { MouseEvent, useState } from 'react'
 import { Sprite } from '../Sprite/Sprite'
 import s from './AppBar.module.scss'
 
+// TODO
+
 export default function AppBar() {
 	const [isActive, setActive] = useState<boolean>(false)
 	const [isServicesOpen, setServicesOpen] = useState<boolean>(false)
