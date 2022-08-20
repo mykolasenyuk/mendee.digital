@@ -5,9 +5,18 @@ import s from './AppBar.module.scss'
 interface Props {
 	isActive: boolean
 	setActive: Dispatch<SetStateAction<boolean>>
+	bgColor: 'normal' | 'dark' | 'light'
+	setBgColor: Dispatch<SetStateAction<'normal' | 'dark' | 'light'>>
+	setOpen: Dispatch<SetStateAction<string>>
 }
 
-const AppBar: FC<Props> = ({ isActive, setActive }) => {
+const AppBar: FC<Props> = ({
+	isActive,
+	setActive,
+	bgColor,
+	setBgColor,
+	setOpen,
+}) => {
 	const [isServicesOpen, setServicesOpen] = useState<boolean>(false)
 	const [isAboutUsOpen, setAboutUsOpen] = useState<boolean>(false)
 	const [isContactOpen, setContactOpen] = useState<boolean>(false)
@@ -17,20 +26,39 @@ const AppBar: FC<Props> = ({ isActive, setActive }) => {
 	}
 
 	const onMenuItemClickHandler = (e: MouseEvent<HTMLLIElement>) => {
-		if (e.currentTarget.textContent === 'SERVICES') {
+		const { textContent } = e.currentTarget
+		if (textContent === 'SERVICES') {
 			setServicesOpen(!isServicesOpen)
 			setAboutUsOpen(false)
 			setContactOpen(false)
+			setBgColor('normal')
+			setOpen('100%')
+			if (!isServicesOpen) {
+				setBgColor('light')
+				setOpen('50%')
+			}
 		}
-		if (e.currentTarget.textContent === 'ABOUT US') {
+		if (textContent === 'ABOUT US') {
 			setAboutUsOpen(!isAboutUsOpen)
 			setServicesOpen(false)
 			setContactOpen(false)
+			setBgColor('normal')
+			setOpen('100%')
+			if (!isAboutUsOpen) {
+				setBgColor('light')
+				setOpen('50%')
+			}
 		}
-		if (e.currentTarget.textContent === 'CONTACT') {
+		if (textContent === 'CONTACT') {
 			setContactOpen(!isContactOpen)
 			setAboutUsOpen(false)
 			setServicesOpen(false)
+			setBgColor('normal')
+			setOpen('100%')
+			if (!isContactOpen) {
+				setBgColor('dark')
+				setOpen('50%')
+			}
 		}
 	}
 
@@ -39,7 +67,11 @@ const AppBar: FC<Props> = ({ isActive, setActive }) => {
 			<div className={s.headerContainer}>
 				<nav className={s.navBar}>
 					<div>
-						<Sprite id='icon-logoName' width={285} height={48} />
+						<Sprite
+							id={`icon-logoName${bgColor === 'dark' ? '-darkMode' : ''}`}
+							width={285}
+							height={48}
+						/>
 					</div>
 
 					<button className={s.menuBtn} onClick={toggleClass}>
@@ -61,7 +93,9 @@ const AppBar: FC<Props> = ({ isActive, setActive }) => {
 										  }
 										: {}
 								}
-								className={s.navBarListItem}
+								className={`${s.navBarListItem} ${
+									bgColor === 'dark' ? s['navBarListItem_darkMode'] : ''
+								}`}
 								onClick={onMenuItemClickHandler}>
 								SERVICES
 							</li>
@@ -74,7 +108,9 @@ const AppBar: FC<Props> = ({ isActive, setActive }) => {
 										  }
 										: {}
 								}
-								className={s.navBarListItem}
+								className={`${s.navBarListItem} ${
+									bgColor === 'dark' ? s['navBarListItem_darkMode'] : ''
+								}`}
 								onClick={onMenuItemClickHandler}>
 								ABOUT US
 							</li>
@@ -87,7 +123,9 @@ const AppBar: FC<Props> = ({ isActive, setActive }) => {
 										  }
 										: {}
 								}
-								className={s.navBarListItem}
+								className={`${s.navBarListItem} ${
+									bgColor === 'dark' ? s['navBarListItem_darkMode'] : ''
+								}`}
 								onClick={onMenuItemClickHandler}>
 								CONTACT
 							</li>

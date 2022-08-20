@@ -1,0 +1,9 @@
+.index {
+	position: relative;
+	height: 100vh;
+	transition: 350ms;
+
+	&_darkMode {
+		background-color: #232323;
+	}
+}

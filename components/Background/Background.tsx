@@ -1,56 +1,44 @@
-import { ReactNode, useState } from 'react'
+import { FC, ReactNode } from 'react'
 import s from './Background.module.scss'
 
-interface LayoutProps {
-  children: ReactNode
+interface Props {
+	children: ReactNode
+	bgColor: 'normal' | 'dark' | 'light'
+	open: string
 }
-export default function Background({ children }: LayoutProps) {
-  const [bgColor, setBgColor] = useState<boolean>(true)
-  const [open, setOpen] = useState<string>('100%')
-  // const [dark, setDark] = useState<boolean>(false)
 
-  const onBtnClick = () => {
-    // setBgColor((prev) => !prev)
-    if (open === '100%') {
-      setOpen('60%')
-    } else {
-      setOpen('100%')
-    }
-  }
-  const onClick = () => {
-    setBgColor((prev) => !prev)
-  }
+const Background: FC<Props> = ({ children, bgColor, open }) => {
+	const testColor = () => {
+		if (bgColor === 'normal') {
+			return s.circles
+		}
+		if (bgColor === 'dark') {
+			return s.circlesDark
+		}
+		return s.circlesLight
+	}
 
-  // console.log(bgColor)
-
-  return (
-    <>
-      <div className={s.area}>
-        <ul
-          className={bgColor ? s.circles : s.circlesDark}
-          style={{ width: open }}
-        >
-          <button className={s.btn} type="button" onClick={onBtnClick}>
-            width
-          </button>
-          <button className={s.btn1} type="button" onClick={onClick}>
-            Color
-          </button>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div className={s.container}>{children}</div>
-    </>
-  )
+	return (
+		<>
+			<div className={s.area}>
+				<ul className={testColor()} style={{ width: open }}>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div className={s.container}>{children}</div>
+		</>
+	)
 }
+
+export default Background

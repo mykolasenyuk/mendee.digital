@@ -3,6 +3,7 @@
 	width: 100%;
 	z-index: 99;
 }
+
 .headerContainer {
 	padding: 20px 40px;
 	@media screen and (max-width: 960px) {
@@ -15,14 +16,17 @@
 		width: 200px;
 		height: 30px;
 	}
+
 	width: 285px;
 	height: 48px;
 }
+
 .navMenu {
 	@media screen and (min-width: 960px) {
 		display: flex;
 		align-items: center;
 	}
+
 	@media screen and (max-width: 961px) {
 		position: absolute;
 		opacity: 0;
@@ -48,6 +52,7 @@
 		display: flex;
 		align-items: center;
 	}
+
 	@media screen and (max-width: 961px) {
 		position: absolute;
 		opacity: 1;
@@ -67,22 +72,26 @@
 	justify-content: space-between;
 	align-items: center;
 }
+
 .navBarList {
 	@media screen and (max-width: 960px) {
 		margin-bottom: 95px;
 		text-align: center;
 	}
+
 	@media screen and (min-width: 960px) {
 		display: flex;
 	}
 
 	padding: 0;
 }
+
 .navBarListItem {
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 1.12;
 	transition: 0.2s;
+	user-select: none;
 	cursor: pointer;
 
 	&:hover {
@@ -93,16 +102,22 @@
 		margin-bottom: 40px;
 		text-align: center;
 	}
+
+	&_darkMode {
+		color: #fff;
+	}
 }
 .navBarListItem + .navBarListItem {
 	@media screen and (min-width: 960px) {
 		margin-left: 94px;
 	}
 }
+
 .menuBtn {
 	@media screen and (min-width: 960px) {
 		display: none;
 	}
+
 	display: inline-flex;
 	margin: 0;
 	margin-left: auto;
