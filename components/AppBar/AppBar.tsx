@@ -8,6 +8,12 @@ interface Props {
 	bgColor: 'normal' | 'dark' | 'light'
 	setBgColor: Dispatch<SetStateAction<'normal' | 'dark' | 'light'>>
 	setOpen: Dispatch<SetStateAction<string>>
+	isServicesOpen: boolean
+	setServicesOpen: Dispatch<SetStateAction<boolean>>
+	isAboutUsOpen: boolean
+	setAboutUsOpen: Dispatch<SetStateAction<boolean>>
+	isContactOpen: boolean
+	setContactOpen: Dispatch<SetStateAction<boolean>>
 }
 
 const AppBar: FC<Props> = ({
@@ -16,11 +22,13 @@ const AppBar: FC<Props> = ({
 	bgColor,
 	setBgColor,
 	setOpen,
+	isServicesOpen,
+	setServicesOpen,
+	isAboutUsOpen,
+	setAboutUsOpen,
+	isContactOpen,
+	setContactOpen,
 }) => {
-	const [isServicesOpen, setServicesOpen] = useState<boolean>(false)
-	const [isAboutUsOpen, setAboutUsOpen] = useState<boolean>(false)
-	const [isContactOpen, setContactOpen] = useState<boolean>(false)
-
 	const toggleClass = () => {
 		setActive(!isActive)
 	}

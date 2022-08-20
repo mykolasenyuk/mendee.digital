@@ -2,6 +2,8 @@
 	position: relative;
 	height: 100vh;
 	transition: 350ms;
+	width: 100vw;
+	overflow: hidden;
 
 	&_darkMode {
 		background-color: #232323;
