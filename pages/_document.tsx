@@ -3,6 +3,7 @@ import { Head, Html, Main, NextScript } from 'next/document'
 const Document = () => (
 	<Html>
 		<Head>
+			<title>Mendee.Digital</title>
 			<link rel='preconnect' href='https://fonts.googleapis.com' />
 			<link
 				rel='preconnect'
@@ -16,7 +17,6 @@ const Document = () => (
 		</Head>
 		<body>
 			<Main />
-
 			<NextScript />
 		</body>
 	</Html>
