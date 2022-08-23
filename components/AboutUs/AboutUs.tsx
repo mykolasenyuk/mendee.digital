@@ -19,7 +19,10 @@ const AboutUs: FC<Props> = ({ isAboutUsOpen }) => {
         and skills, regardless of their location or circumstances.
       </div>
       <div className={s.descr}>
-        <Sprite id="icon-Logo" height={24} width={51} fill="#fff" />
+        <div className={s.logo}>
+          <Sprite id="icon-Logo" height={24} width={51} fill="#fff" />
+        </div>
+
         <p>
           We've got amazing people from the UK, Poland, Ukraine, Turkey and
           Mongolia right now, but we're always looking for more!
