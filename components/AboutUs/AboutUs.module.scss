@@ -1,0 +1,98 @@
+// .visually-hidden {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   border: 0;
+//   padding: 0;
+
+//   white-space: nowrap;
+//   clip-path: inset(100%);
+//   clip: rect(0 0 0 0);
+//   overflow: hidden;
+// }
+.title {
+  @media screen and (min-width: 960px) {
+    opacity: 0;
+  }
+  z-index: 10;
+  margin-top: 114px;
+  opacity: 1;
+  text-align: center;
+  color: #ffa737;
+}
+
+.aboutUs {
+  font-family: Source Code Pro;
+  //   overflow: hidden;
+  font-size: 24px;
+  position: absolute;
+  opacity: 0;
+  transition: 250ms;
+  width: 0px;
+  //   right: -50%;
+  top: 0;
+  height: 100vh;
+
+  overflow: hidden;
+
+  &_active {
+    @media screen and (min-width: 960px) {
+      // font-size: 14px;
+      z-index: 10;
+      opacity: 1;
+      right: 0%;
+      width: 50%;
+      height: 100vh;
+      overflow: visible;
+    }
+    z-index: 99;
+    opacity: 1;
+    right: 0%;
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+  }
+}
+
+.mendeeDescr {
+  @media screen and (max-width: 960px) {
+    font-size: 14px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 0;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  padding-top: 110px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 63px;
+}
+.descr {
+  @media screen and (max-width: 960px) {
+    font-size: 14px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  margin-right: 70px;
+  margin-left: 70px;
+  background-color: #ffa737;
+  padding-right: 48px;
+  padding-left: 48px;
+  padding-top: 28px;
+  padding-bottom: 41px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+}
