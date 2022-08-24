@@ -2,6 +2,7 @@ import { useState } from 'react'
 import AboutUs from '../components/AboutUs/AboutUs'
 import AppBar from '../components/AppBar/AppBar'
 import Background from '../components/Background/Background'
+import Contact from '../components/Contact/Contact'
 import Hero from '../components/Hero/Hero'
 import Services from '../components/Services/Services'
 import s from '../styles/index.module.scss'
@@ -36,6 +37,7 @@ const Home = () => {
       </Background>
       {/* <Services isServicesOpen={isServicesOpen} /> */}
       <AboutUs isAboutUsOpen={isAboutUsOpen} />
+      <Contact isContactOpen={isContactOpen} />
     </div>
   )
 }
