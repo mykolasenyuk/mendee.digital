@@ -11,7 +11,52 @@ const Contact: FC<Props> = ({ isContactOpen }) => {
     <aside
       className={`${s.contact} ${isContactOpen ? s['contact_active'] : ''}`}
     >
-      <h1>HEllo Contact</h1>
+      <div className={s.contactContainer}>
+        <ul className={s.socialList}>
+          <li>
+            <a className={s.socialLink}>
+              <Sprite id="icon-instagram" height={30} />
+            </a>
+          </li>
+          <li>
+            <a className={s.socialLink}>
+              <Sprite id="icon-twitter" height={30} />
+            </a>
+          </li>
+
+          <li>
+            <a className={s.socialLink}>
+              <Sprite id="icon-facebook" height={30} />
+            </a>
+          </li>
+          <li>
+            <a className={s.socialLink}>
+              <Sprite id="icon-linkdn" height={30} />
+            </a>
+          </li>
+          <li>
+            <a className={s.socialLink}>
+              <Sprite id="icon-mail" height={30} />
+            </a>
+          </li>
+          <li>
+            <a className={s.socialLink}>
+              <Sprite id="icon-phone" height={30} />
+            </a>
+          </li>
+        </ul>
+        <div className={s.subscribeContainer}>
+          <p>Subscribe for our monthly newsletter</p>
+          <div className={s.inputCont}>
+            <input
+              type="email"
+              placeholder="ENTER E-MAIL"
+              className={s.input}
+            />
+            <button className={s.btn}>SUBMIT</button>
+          </div>
+        </div>
+      </div>
     </aside>
   )
 }
