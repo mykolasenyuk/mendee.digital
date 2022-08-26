@@ -1,105 +1,123 @@
 .services {
-	position: absolute;
-	opacity: 0;
-	transition: 350ms;
-	// display: none;
-	z-index: 10;
-	height: 100vh;
-	top: 0;
-	right: -50%;
-	width: 0px;
+  position: absolute;
+  opacity: 0;
+  transition: 350ms;
+  display: none;
+  z-index: 10;
+  height: 100vh;
+  top: 0;
+  // right: -50%;
+  width: 0px;
 
-	&_active {
-		opacity: 1;
-		// display: block;
-		width: 100%;
-		right: 0%;
+  &_active {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    right: 0%;
+    animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
-		@media screen and (min-width: 960px) {
-			width: 50%;
-		}
-	}
+    @media screen and (min-width: 960px) {
+      width: 50%;
+    }
+  }
 
-	&Nav {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		padding: 100px 30px;
+  &Nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 100px 30px;
 
-		@media screen and (min-width: 960px) {
-			padding: 100px 30px 100px 0;
-		}
+    @media screen and (min-width: 960px) {
+      padding: 100px 30px 100px 0;
+    }
 
-		&Item {
-			display: flex;
-			flex-direction: column;
-			padding: 20px 30px 25px 15px;
-			border-radius: 10px;
-			gap: 19px;
-			transition: 250ms;
-			cursor: pointer;
+    &Item {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px 25px 15px;
+      border-radius: 10px;
+      gap: 19px;
+      transition: 250ms;
+      cursor: pointer;
 
-			@media screen and (min-width: 700px) {
-				gap: 28px;
-				padding: 30px 50px 38px 25px;
-			}
+      @media screen and (min-width: 700px) {
+        gap: 28px;
+        padding: 30px 50px 38px 25px;
+      }
 
-			@media screen and (min-width: 1500px) {
-				gap: 42px;
-			}
+      @media screen and (min-width: 1500px) {
+        gap: 42px;
+      }
 
-			&Active {
-				background-color: #ffa737;
+      &Active {
+        animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+          both;
+        background-color: #ffa737;
 
-				& > .servicesNavItemTitle {
-					color: #fff;
-				}
+        & > .servicesNavItemTitle {
+          color: #fff;
+        }
 
-				& > .servicesNavItemHidden {
-					display: block;
-					opacity: 1;
-				}
-			}
+        & > .servicesNavItemHidden {
+          display: block;
+          opacity: 1;
+        }
+      }
 
-			&Title {
-				display: flex;
-				justify-content: space-between;
-				color: #232323;
-				font-weight: 400;
-				font-size: 22px;
-				line-height: 26.3px;
-				align-items: center;
+      &Title {
+        display: flex;
+        justify-content: space-between;
+        color: #232323;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26.3px;
+        align-items: center;
 
-				@media screen and (min-width: 700px) {
-					font-size: 28px;
-					line-height: 32.3px;
-				}
+        @media screen and (min-width: 700px) {
+          font-size: 28px;
+          line-height: 32.3px;
+        }
 
-				@media screen and (min-width: 1450px) {
-					font-size: 42px;
-					line-height: 48.3px;
-				}
-			}
+        //     @media screen and (min-width: 1450px) {
+        //       font-size: 28px;
+        //       line-height: 48.3px;
+        //     }
+      }
 
-			&Hidden {
-				opacity: 0;
-				display: none;
-				font-family: 'Source Code Pro', sans-serif;
-				font-size: 16px;
-				line-height: 20.22px;
-				margin: 0;
-				transition: 250ms;
+      &Hidden {
+        opacity: 0;
+        display: none;
+        font-family: 'Mulish', sans-serif;
+        font-size: 16px;
+        line-height: 20.22px;
+        margin: 0;
+        transition: 350ms;
 
-				@media screen and (min-width: 700px) {
-					font-size: 19px;
-					line-height: 23.22px;
-				}
+        @media screen and (min-width: 700px) {
+          font-size: 19px;
+          line-height: 23.22px;
+        }
 
-				@media screen and (min-width: 1450px) {
-					font-size: 32px;
-					line-height: 40.22px;
-				}
-			}
-		}
-	}
+        // @media screen and (min-width: 1450px) {
+        //   font-size: 32px;
+        //   line-height: 40.22px;
+        // }
+      }
+    }
+  }
+}
+
+@keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.4);
+    transform: scaleY(0.4);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
 }
