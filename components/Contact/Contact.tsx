@@ -15,7 +15,7 @@ const Contact: FC<Props> = ({ isContactOpen }) => {
         <ul className={s.socialList}>
           <li>
             <a className={s.socialLink}>
-              <Sprite id="icon-instagram" height={30} />
+              <Sprite id="icon-linkdn" height={30} />
             </a>
           </li>
           <li>
@@ -31,22 +31,25 @@ const Contact: FC<Props> = ({ isContactOpen }) => {
           </li>
           <li>
             <a className={s.socialLink}>
-              <Sprite id="icon-linkdn" height={30} />
+              <Sprite id="icon-instagram" height={30} />
             </a>
           </li>
+
           <li>
             <a className={s.socialLink}>
               <Sprite id="icon-mail" height={30} />
             </a>
           </li>
-          <li>
+          {/* <li>
             <a className={s.socialLink}>
               <Sprite id="icon-phone" height={30} />
             </a>
-          </li>
+          </li> */}
         </ul>
         <div className={s.subscribeContainer}>
-          <p>Subscribe for our monthly newsletter</p>
+          <p className={s.subcribeTitle}>
+            Subscribe for our monthly newsletter
+          </p>
           <div className={s.inputCont}>
             <input
               type="email"
