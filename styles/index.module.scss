@@ -1,11 +1,11 @@
 .index {
-  position: relative;
-  height: 100vh;
-  transition: 350ms;
-  // width: 100vw;
-  //   overflow: hidden;
+	position: relative;
+	height: 100vh;
+	transition: 350ms;
+	width: 100vw;
+	overflow-x: hidden;
 
-  &_darkMode {
-    background-color: #232323;
-  }
+	&_darkMode {
+		background-color: #232323;
+	}
 }
