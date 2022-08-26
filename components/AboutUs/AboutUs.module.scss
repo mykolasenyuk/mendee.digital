@@ -42,20 +42,19 @@
 	height: 100vh;
 	// overflow: hidden;
 	transition: 350ms;
+	z-index: 10;
 
 	&_active {
 		@media screen and (min-width: 960px) {
-			animation: bounce;
-			animation-duration: 2s;
+			// animation: bounce;
+			// animation-duration: 2s;
 			// font-size: 14px;
-			z-index: 10;
 			opacity: 1;
 			right: 0;
 			width: 50%;
 			height: 100vh;
 			// overflow: visible;
 		}
-		z-index: 10;
 		opacity: 1;
 		right: 0;
 		// left: 0;
